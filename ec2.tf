@@ -6,7 +6,7 @@ resource "aws_instance" "DB" {
     # provisioners will run when you are creating resources
     # they will not run once the resources are created
     provisioner "local-exec" {
-        command = echo "The server's IP address is ${self.private_ip} > private_ips.txt" # self is aws_instance.web
+        command = "echo The server's IP address is ${self.private_ip} > private_ips.txt" # self is aws_instance.web
     }
 
     # provisioner "local-exec" {
